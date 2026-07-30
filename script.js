@@ -37,6 +37,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ---------- Anchor scroll offset (sticky header) ---------- */
+  var header = document.querySelector('.site-header');
+
+  document.querySelectorAll('a[href^="#article-"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      var headerHeight = header ? header.getBoundingClientRect().height : 0;
+      var targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      window.scrollTo({ top: targetTop, behavior: 'smooth' });
+    });
+  });
+
   /* ---------- Mobile nav toggle ---------- */
   var navToggle = document.querySelector('.nav-toggle');
   var navMobile = document.querySelector('.nav-mobile');
@@ -45,6 +59,13 @@ document.addEventListener('DOMContentLoaded', function () {
     navToggle.addEventListener('click', function () {
       var isOpen = navMobile.classList.toggle('is-open');
       navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    navMobile.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navMobile.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
