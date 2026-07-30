@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elektrárna Dukovany II</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================= HEADER ============================= -->
+<header class="site-header">
+  <div class="header-inner">
+
+    <a href="#" class="logo" aria-label="Elektrárna Dukovany II — domů">
+      <img src="https://www.figma.com/api/mcp/asset/5d3c921e-1281-42c1-be11-26b68fcad55a.svg" alt="Logo Elektrárna Dukovany II">
+    </a>
+
+    <nav class="nav-desktop" aria-label="Hlavní navigace">
+      <ul>
+        <li><a class="nav-link is-active" href="#">O nás</a></li>
+        <li><a class="nav-link" href="#">Aktuality</a></li>
+        <li><a class="nav-link" href="#blog">Blog</a></li>
+        <li><a class="nav-link" href="#">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 6H21" stroke="#363738" stroke-width="2" stroke-linecap="round"/>
+        <path d="M3 12H21" stroke="#363738" stroke-width="2" stroke-linecap="round"/>
+        <path d="M3 18H21" stroke="#363738" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <div class="lang-switcher">
+      <button class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false">
+        <span class="lang-current">CZ</span>
+        <span class="lang-chevron">
+          <svg viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L6 5L11 1" stroke="#363738" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </button>
+      <div class="lang-bubble" role="menu">
+        <button type="button" class="is-selected" data-lang="CZ" role="menuitem">Čeština</button>
+        <button type="button" data-lang="EN" role="menuitem">English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- mobile nav -->
+  <nav class="nav-mobile" aria-label="Mobilní navigace">
+    <a class="nav-link is-active" href="#">O nás</a>
+    <a class="nav-link" href="#">Aktuality</a>
+    <a class="nav-link" href="#blog">Blog</a>
+    <a class="nav-link" href="#">Kontakt</a>
+  </nav>
+</header>
+
+<!-- ============================= HERO ============================= -->
+<main>
+  <section class="hero">
+    <div class="hero-image-wrap">
+      <img src="https://www.figma.com/api/mcp/asset/0bb09477-1971-477a-98e7-197847a123ec.png" alt="Jaderná elektrárna Dukovany">
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <p>Jaderná elektrárna Dukovany je jedním z klíčových zdrojů výroby elektřiny v České republice. Do provozu byla uvedena v 80. letech a tvoří ji čtyři tlakovodní reaktory typu VVER-440.</p>
+        <p>Elektrárna pokrývá významnou část domácí spotřeby. Díky stabilní výrobě přispívá k energetické bezpečnosti a nízkouhlíkové produkci elektřiny.</p>
+      </div>
+
+      <div class="hero-cta-wrap">
+        <a href="#article-1" class="btn btn-primary">Dozvědět se více</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= BLOG ============================= -->
+  <section class="blog" id="blog">
+    <h2 class="blog-heading">Aktuality a články</h2>
+
+    <article class="article-card" id="article-1">
+      <div class="article-media">
+        <img src="https://www.figma.com/api/mcp/asset/18c35e7a-8493-4767-8fc7-52bf168b37dc.png" alt="Nový jaderný zdroj v Dukovanech">
+      </div>
+      <div class="article-text">
+        <div class="article-title-row">
+          <h3>Nový jaderný zdroj v Dukovanech</h3>
+          <span class="article-arrow">
+            <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L10 10M10 10V3M10 10H3" stroke="#363738" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </div>
+        <p>Životní cyklus jaderného zařízení – tedy v krátkosti příprava (investiční, licenční a povolovací), výstavba, uvádění do provozu, provozování a vyřazení z provozu – je skutečně běh na dlouhou trať, který trvá i více než 100 let. Z toho přibližně 20 let je projekt připravován a je ve výstavbě, následujících 60 a více let je provozován a nakonec je vyřazen z provozu.</p>
+      </div>
+    </article>
+
+    <article class="article-card reverse" id="article-2">
+      <div class="article-media">
+        <img src="https://www.figma.com/api/mcp/asset/713fe927-f687-42fe-844d-da326ad07f6c.png" alt="O společnosti Elektrárna Dukovany II">
+      </div>
+      <div class="article-text">
+        <div class="article-title-row">
+          <h3>O společnosti</h3>
+          <span class="article-arrow">
+            <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L10 10M10 10V3M10 10H3" stroke="#363738" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </div>
+        <p>V návaznosti na závěry a doporučení Národního akčního plánu rozvoje jaderné energetiky založila společnost ČEZ, a. s. v roce 2015 dceřinou společnost Elektrárna Dukovany II, a. s., která je investorem projektu nového jaderného zdroje v lokalitě Dukovany. Vrcholným orgánem je valná hromada, 80&nbsp;% akcií vlastní Ministerstvo financí ČR a zbylých 20&nbsp;% společnost ČEZ, a. s.</p>
+      </div>
+    </article>
+
+    <article class="article-card" id="article-3">
+      <div class="article-media">
+        <img src="https://www.figma.com/api/mcp/asset/595e198b-0f0a-4925-8dc7-907793f2f34a.png" alt="Budoucnost energetiky">
+      </div>
+      <div class="article-text">
+        <div class="article-title-row">
+          <h3>Budoucnost energetiky</h3>
+          <span class="article-arrow">
+            <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L10 10M10 10V3M10 10H3" stroke="#363738" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </div>
+        <p>Nové jaderné bloky jsou klíčovým pilířem dlouhodobé energetické strategie České republiky. Stabilní a nízkouhlíková výroba elektřiny pomáhá zajistit energetickou soběstačnost země i v období rostoucí poptávky a odklonu od fosilních paliv.</p>
+      </div>
+    </article>
+
+    <article class="article-card reverse" id="article-4">
+      <div class="article-media">
+        <img src="https://www.figma.com/api/mcp/asset/edf66b34-bb55-4879-b016-a000e8ce40bb.png" alt="Aktuality ze stavby">
+      </div>
+      <div class="article-text">
+        <div class="article-title-row">
+          <h3>Aktuality</h3>
+          <span class="article-arrow">
+            <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L10 10M10 10V3M10 10H3" stroke="#363738" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </div>
+        <p>Fakulta elektrotechniky a komunikačních technologií VUT v Brně uspořádala 15. října první ročník akce PerFEKT ATOM Day, která přilákala stovky studentů se zájmem o jadernou energetiku. Součástí programu byly interaktivní výstava, jaderný kvíz a prezentace průmyslových partnerů včetně Skupiny ČEZ.</p>
+      </div>
+    </article>
+  </section>
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <p>Copyright 2026 Elektrárna Dukovany II</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
