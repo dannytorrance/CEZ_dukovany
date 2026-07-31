@@ -51,6 +51,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* ---------- Hero parallax ---------- */
+  var heroImg = document.querySelector('.hero-image-wrap img');
+  var heroWrap = document.querySelector('.hero-image-wrap');
+
+  if (heroImg && heroWrap && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var ticking = false;
+    var speed = 0.35;
+
+    function updateParallax() {
+      var rect = heroWrap.getBoundingClientRect();
+      var offset = rect.top * speed;
+      heroImg.style.transform = 'translateY(' + offset + 'px)';
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    updateParallax();
+  }
+
   /* ---------- Mobile nav toggle ---------- */
   var navToggle = document.querySelector('.nav-toggle');
   var navMobile = document.querySelector('.nav-mobile');
