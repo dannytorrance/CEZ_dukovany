@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ---------- Anchor scroll offset (sticky header) ---------- */
   var header = document.querySelector('.site-header');
 
-  document.querySelectorAll('a[href^="#article-"]').forEach(function (link) {
+  document.querySelectorAll('a[href^="#article-"], a[href="#blog"]').forEach(function (link) {
     link.addEventListener('click', function (e) {
       var target = document.querySelector(this.getAttribute('href'));
       if (!target) return;
