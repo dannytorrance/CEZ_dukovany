@@ -2,6 +2,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ---------- Language switcher ---------- */
   var langSwitcher = document.querySelector('.lang-switcher');
+  /* ---------- Page translation (CZ / EN) ---------- */
+  function applyTranslation(lang) {
+    document.querySelectorAll('[data-en]').forEach(function (el) {
+      if (!el.hasAttribute('data-cs')) {
+        el.setAttribute('data-cs', el.textContent);
+      }
+      el.textContent = lang === 'EN' ? el.getAttribute('data-en') : el.getAttribute('data-cs');
+    });
+
+    document.querySelectorAll('[data-en-alt]').forEach(function (el) {
+      if (!el.hasAttribute('data-cs-alt')) {
+        el.setAttribute('data-cs-alt', el.getAttribute('alt'));
+      }
+      el.setAttribute('alt', lang === 'EN' ? el.getAttribute('data-en-alt') : el.getAttribute('data-cs-alt'));
+    });
+
+    document.querySelectorAll('[data-en-aria]').forEach(function (el) {
+      if (!el.hasAttribute('data-cs-aria')) {
+        el.setAttribute('data-cs-aria', el.getAttribute('aria-label'));
+      }
+      el.setAttribute('aria-label', lang === 'EN' ? el.getAttribute('data-en-aria') : el.getAttribute('data-cs-aria'));
+    });
+
+    document.documentElement.setAttribute('lang', lang === 'EN' ? 'en' : 'cs');
+  }
+
   var langBtn = document.querySelector('.lang-switcher-btn');
   var langOptions = document.querySelectorAll('.lang-bubble button');
   var langLabel = document.querySelector('.lang-current');
@@ -20,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (langLabel) {
           langLabel.textContent = opt.getAttribute('data-lang');
         }
+        applyTranslation(opt.getAttribute('data-lang'));
         langSwitcher.classList.remove('is-open');
       });
     });
