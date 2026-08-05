@@ -511,6 +511,9 @@ a{ color: inherit; text-decoration: none; }
   .nav-toggle{ display: flex; margin-left: auto; margin-right: 4px; }
   .nav-mobile.is-open{ display: flex; }
 
+  .header-inner{ padding-left: 24px; padding-right: 24px; }
+  .hero-content, .blog{ padding-left: 24px; padding-right: 24px; }
+
   .lang-bubble{
     min-width: 180px;
     padding: 10px;
@@ -533,9 +536,8 @@ a{ color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 640px){
-  .header-inner{ padding: var(--space-16) 24px; }
+  .header-inner{ padding-top: var(--space-16); padding-bottom: var(--space-16); }
   .logo{ width: 150px; height: 52px; padding: 8px 0; }
-  .hero-content, .blog{ padding-left: 24px; padding-right: 24px; }
   .hero-text p{ min-width: 100%; }
   .article-media{ height: 200px; }
   .article-title-row h3{ font-size: 20px; line-height: 28px; }
