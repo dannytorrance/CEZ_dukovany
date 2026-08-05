@@ -84,12 +84,14 @@ document.addEventListener('DOMContentLoaded', function () {
     navToggle.addEventListener('click', function () {
       var isOpen = navMobile.classList.toggle('is-open');
       navToggle.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
     navMobile.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navMobile.classList.remove('is-open');
         navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
       });
     });
   }
