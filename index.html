@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elektrárna Dukovany II</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="apple-touch-icon" href="favicon-180.png">
-<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16.png">
+<link rel="apple-touch-icon" href="images/favicon/favicon-180.png">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -17,7 +17,10 @@
   <div class="header-inner">
 
     <a href="#" class="logo" aria-label="Elektrárna Dukovany II — domů" data-en-aria="Elektrárna Dukovany II — home">
-      <img src="https://www.figma.com/api/mcp/asset/5d3c921e-1281-42c1-be11-26b68fcad55a.svg" alt="Logo Elektrárna Dukovany II" data-en-alt="Elektrárna Dukovany II logo">
+      <picture>
+        <source media="(max-width: 640px)" srcset="images/logo-mobile.svg">
+        <img src="images/logo-desktop.svg" alt="Logo Elektrárna Dukovany II" data-en-alt="Elektrárna Dukovany II logo">
+      </picture>
     </a>
 
     <nav class="nav-desktop" aria-label="Hlavní navigace" data-en-aria="Main navigation">
@@ -80,7 +83,7 @@
 <main>
   <section class="hero">
     <div class="hero-image-wrap">
-      <img src="https://www.figma.com/api/mcp/asset/0bb09477-1971-477a-98e7-197847a123ec.png" alt="Jaderná elektrárna Dukovany" data-en-alt="Dukovany Nuclear Power Plant">
+      <img src="images/hero.jpg" alt="Jaderná elektrárna Dukovany" data-en-alt="Dukovany Nuclear Power Plant">
     </div>
 
     <div class="hero-content">
@@ -101,7 +104,7 @@
 
     <article class="article-card" id="article-1">
       <div class="article-media">
-        <img src="https://www.figma.com/api/mcp/asset/18c35e7a-8493-4767-8fc7-52bf168b37dc.png" alt="Nový jaderný zdroj v Dukovanech" data-en-alt="New nuclear source in Dukovany">
+        <img src="images/article-1.png" alt="Nový jaderný zdroj v Dukovanech" data-en-alt="New nuclear source in Dukovany">
       </div>
       <div class="article-text">
         <div class="article-title-row">
@@ -118,7 +121,7 @@
 
     <article class="article-card reverse" id="article-2">
       <div class="article-media">
-        <img src="https://www.figma.com/api/mcp/asset/713fe927-f687-42fe-844d-da326ad07f6c.png" alt="O společnosti Elektrárna Dukovany II" data-en-alt="About Elektrárna Dukovany II">
+        <img src="images/article-2.png" alt="O společnosti Elektrárna Dukovany II" data-en-alt="About Elektrárna Dukovany II">
       </div>
       <div class="article-text">
         <div class="article-title-row">
@@ -135,7 +138,7 @@
 
     <article class="article-card" id="article-3">
       <div class="article-media">
-        <img src="https://www.figma.com/api/mcp/asset/595e198b-0f0a-4925-8dc7-907793f2f34a.png" alt="Budoucnost energetiky" data-en-alt="The future of energy">
+        <img src="images/article-3.png" alt="Budoucnost energetiky" data-en-alt="The future of energy">
       </div>
       <div class="article-text">
         <div class="article-title-row">
@@ -152,7 +155,7 @@
 
     <article class="article-card reverse" id="article-4">
       <div class="article-media">
-        <img src="https://www.figma.com/api/mcp/asset/edf66b34-bb55-4879-b016-a000e8ce40bb.png" alt="Aktuality ze stavby" data-en-alt="Construction news">
+        <img src="images/article-4.png" alt="Aktuality ze stavby" data-en-alt="Construction news">
       </div>
       <div class="article-text">
         <div class="article-title-row">
@@ -174,6 +177,6 @@
   <p>Copyright 2026 Elektrárna Dukovany II</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
