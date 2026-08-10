@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --gray-1: #4a4a4a;
+  --gray-2: #8a8a8a;
+  --gray-3: #d4d4d4;
+  --gray-4: #f2f2f2;
+  --font: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: var(--font);
+  background: var(--white);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Hero ---------- */
+
+.cs-hero{
+  padding: 96px 32px 64px;
+  border-bottom: 3px solid var(--black);
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.cs-kicker{
+  margin: 0 0 16px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray-1);
+}
+
+.cs-hero h1{
+  margin: 0 0 16px;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.cs-subtitle{
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--gray-1);
+}
+
+/* ---------- Content ---------- */
+
+.cs-content{
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.cs-section{
+  padding: 48px 0;
+  border-bottom: 1px solid var(--gray-3);
+}
+
+.cs-section:last-child{
+  border-bottom: none;
+}
+
+.cs-section h2{
+  margin: 0 0 24px;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  position: relative;
+  padding-left: 20px;
+}
+
+.cs-section h2::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  background: var(--black);
+}
+
+.cs-section ul{
+  margin: 0;
+  padding-left: 22px;
+}
+
+.cs-section li{
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--gray-1);
+}
+
+.cs-section li::marker{
+  color: var(--black);
+}
+
+.cs-section li strong,
+.cs-section li b{
+  color: var(--black);
+}
+
+.cs-section code{
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 13.5px;
+  background: var(--gray-4);
+  border: 1px solid var(--gray-3);
+  border-radius: 4px;
+  padding: 1px 6px;
+  color: var(--black);
+}
+
+/* ---------- Design process (sub-sections) ---------- */
+
+.cs-process h3{
+  margin: 32px 0 12px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.cs-process h3:first-of-type{
+  margin-top: 0;
+}
+
+.cs-process ul{
+  margin-bottom: 0;
+}
+
+/* ---------- Footer ---------- */
+
+.cs-footer{
+  border-top: 3px solid var(--black);
+  padding: 32px;
+  text-align: center;
+}
+
+.cs-footer p{
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gray-2);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px){
+  .cs-hero{ padding: 64px 20px 40px; }
+  .cs-content{ padding: 0 20px; }
+  .cs-section{ padding: 36px 0; }
+  .cs-section h2{ font-size: 24px; }
+}

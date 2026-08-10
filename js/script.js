@@ -124,3 +124,36 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var fab = document.getElementById('caseStudyFab');
+  var modal = document.getElementById('caseStudyModal');
+  var closeBtn = document.getElementById('caseStudyClose');
+
+  if (!fab || !modal) return;
+
+  function openModal() {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  fab.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.querySelectorAll('[data-close]').forEach(function (el) {
+    el.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+      closeModal();
+    }
+  });
+});
