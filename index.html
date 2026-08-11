@@ -1,204 +1,447 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elektrárna Dukovany II</title>
-<link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16.png">
-<link rel="apple-touch-icon" href="images/favicon/favicon-180.png">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elektrárna Dukovany II</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16.png"
+    />
+    <link rel="apple-touch-icon" href="images/favicon/favicon-180.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ============================= HEADER ============================= -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          href="#"
+          class="logo"
+          aria-label="Elektrárna Dukovany II — domů"
+          data-en-aria="Elektrárna Dukovany II — home"
+        >
+          <picture>
+            <source
+              media="(max-width: 640px)"
+              srcset="images/logo-mobile.svg"
+            />
+            <img
+              src="images/logo-desktop.svg"
+              alt="Logo Elektrárna Dukovany II"
+              data-en-alt="Elektrárna Dukovany II logo"
+            />
+          </picture>
+        </a>
 
-<!-- ============================= HEADER ============================= -->
-<header class="site-header">
-  <div class="header-inner">
+        <nav
+          class="nav-desktop"
+          aria-label="Hlavní navigace"
+          data-en-aria="Main navigation"
+        >
+          <ul>
+            <li>
+              <a class="nav-link is-active" href="#" data-en="About us"
+                >O nás</a
+              >
+            </li>
+            <li><a class="nav-link" href="#" data-en="News">Aktuality</a></li>
+            <li><a class="nav-link" href="#blog" data-en="Blog">Blog</a></li>
+            <li><a class="nav-link" href="#" data-en="Contact">Kontakt</a></li>
+          </ul>
+        </nav>
 
-    <a href="#" class="logo" aria-label="Elektrárna Dukovany II — domů" data-en-aria="Elektrárna Dukovany II — home">
-      <picture>
-        <source media="(max-width: 640px)" srcset="images/logo-mobile.svg">
-        <img src="images/logo-desktop.svg" alt="Logo Elektrárna Dukovany II" data-en-alt="Elektrárna Dukovany II logo">
-      </picture>
-    </a>
-
-    <nav class="nav-desktop" aria-label="Hlavní navigace" data-en-aria="Main navigation">
-      <ul>
-        <li><a class="nav-link is-active" href="#" data-en="About us">O nás</a></li>
-        <li><a class="nav-link" href="#" data-en="News">Aktuality</a></li>
-        <li><a class="nav-link" href="#blog" data-en="Blog">Blog</a></li>
-        <li><a class="nav-link" href="#" data-en="Contact">Kontakt</a></li>
-      </ul>
-    </nav>
-
-    <button class="nav-toggle" aria-label="Otevřít menu" data-en-aria="Open menu" aria-expanded="false">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 6H21" stroke="#363738" stroke-width="2" stroke-linecap="round"/>
-        <path d="M3 12H21" stroke="#363738" stroke-width="2" stroke-linecap="round"/>
-        <path d="M3 18H21" stroke="#363738" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </button>
-
-    <div class="lang-switcher">
-      <button class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false">
-        <span class="lang-current">CZ</span>
-        <span class="lang-chevron">
-          <svg viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L6 5L11 1" stroke="#363738" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <button
+          class="nav-toggle"
+          aria-label="Otevřít menu"
+          data-en-aria="Open menu"
+          aria-expanded="false"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 6H21"
+              stroke="#363738"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M3 12H21"
+              stroke="#363738"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M3 18H21"
+              stroke="#363738"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
           </svg>
-        </span>
-      </button>
-      <div class="lang-bubble" role="menu">
-        <button type="button" class="is-selected" data-lang="CZ" role="menuitem">
-          <span class="lang-option-label">Čeština</span>
-          <span class="lang-check">
-            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.5 7.2L5.5 10.2L11.5 3.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
         </button>
-        <button type="button" data-lang="EN" role="menuitem">
-          <span class="lang-option-label">English</span>
-          <span class="lang-check">
-            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.5 7.2L5.5 10.2L11.5 3.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
 
-  <!-- mobile nav -->
-  <nav class="nav-mobile" aria-label="Mobilní navigace" data-en-aria="Mobile navigation">
-    <a class="nav-link is-active" href="#" data-en="About us">O nás</a>
-    <a class="nav-link" href="#" data-en="News">Aktuality</a>
-    <a class="nav-link" href="#blog" data-en="Blog">Blog</a>
-    <a class="nav-link" href="#" data-en="Contact">Kontakt</a>
-  </nav>
-</header>
-
-<!-- ============================= HERO ============================= -->
-<main>
-  <section class="hero">
-    <div class="hero-image-wrap">
-      <img src="images/hero.jpg" alt="Jaderná elektrárna Dukovany" data-en-alt="Dukovany Nuclear Power Plant">
-    </div>
-
-    <div class="hero-content">
-      <div class="hero-text">
-        <p data-en="The Dukovany Nuclear Power Plant is one of the key sources of electricity generation in the Czech Republic. It was put into operation in the 1980s and consists of four VVER-440 pressurized water reactors.">Jaderná elektrárna Dukovany je jedním z klíčových zdrojů výroby elektřiny v České republice. Do provozu byla uvedena v 80. letech a tvoří ji čtyři tlakovodní reaktory typu VVER-440.</p>
-        <p data-en="The plant covers a significant share of domestic consumption. Thanks to its stable output, it contributes to energy security and low-carbon electricity production.">Elektrárna pokrývá významnou část domácí spotřeby. Díky stabilní výrobě přispívá k energetické bezpečnosti a nízkouhlíkové produkci elektřiny.</p>
-      </div>
-
-      <div class="hero-cta-wrap">
-        <a href="#blog" class="btn btn-primary" data-en="Learn more">Dozvědět se více</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================= BLOG ============================= -->
-  <section class="blog" id="blog">
-    <h2 class="blog-heading" data-en="News and articles">Aktuality a články</h2>
-
-    <article class="article-card" id="article-1">
-      <div class="article-media">
-        <img src="images/article-1.png" alt="Nový jaderný zdroj v Dukovanech" data-en-alt="New nuclear source in Dukovany">
-      </div>
-      <div class="article-text">
-        <div class="article-title-row">
-          <h3 data-en="New nuclear source in Dukovany">Nový jaderný zdroj v Dukovanech</h3>
-          <span class="article-arrow">
-            <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 2L10 10M10 10V3M10 10H3" stroke="#363738" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
+        <div class="lang-switcher">
+          <button
+            class="lang-switcher-btn"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="lang-current">CZ</span>
+            <span class="lang-chevron">
+              <svg
+                viewBox="0 0 12 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L6 5L11 1"
+                  stroke="#363738"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </button>
+          <div class="lang-bubble" role="menu">
+            <button
+              type="button"
+              class="is-selected"
+              data-lang="CZ"
+              role="menuitem"
+            >
+              <span class="lang-option-label">Čeština</span>
+              <span class="lang-check">
+                <svg
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.5 7.2L5.5 10.2L11.5 3.8"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+            <button type="button" data-lang="EN" role="menuitem">
+              <span class="lang-option-label">English</span>
+              <span class="lang-check">
+                <svg
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.5 7.2L5.5 10.2L11.5 3.8"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
         </div>
-        <p data-en="The life cycle of a nuclear facility — briefly, preparation (investment, licensing and permitting), construction, commissioning, operation and decommissioning — is truly a long-distance run that can last more than 100 years. Of that, roughly 20 years are spent on project preparation and construction, the following 60 or more years on operation, and finally the plant is decommissioned.">Životní cyklus jaderného zařízení – tedy v krátkosti příprava (investiční, licenční a povolovací), výstavba, uvádění do provozu, provozování a vyřazení z provozu – je skutečně běh na dlouhou trať, který trvá i více než 100 let. Z toho přibližně 20 let je projekt připravován a je ve výstavbě, následujících 60 a více let je provozován a nakonec je vyřazen z provozu.</p>
       </div>
-    </article>
 
-    <article class="article-card reverse" id="article-2">
-      <div class="article-media">
-        <img src="images/article-2.png" alt="O společnosti Elektrárna Dukovany II" data-en-alt="About Elektrárna Dukovany II">
-      </div>
-      <div class="article-text">
-        <div class="article-title-row">
-          <h3 data-en="About the company">O společnosti</h3>
-          <span class="article-arrow">
-            <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 2L10 10M10 10V3M10 10H3" stroke="#363738" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
+      <!-- mobile nav -->
+      <nav
+        class="nav-mobile"
+        aria-label="Mobilní navigace"
+        data-en-aria="Mobile navigation"
+      >
+        <a class="nav-link is-active" href="#" data-en="About us">O nás</a>
+        <a class="nav-link" href="#" data-en="News">Aktuality</a>
+        <a class="nav-link" href="#blog" data-en="Blog">Blog</a>
+        <a class="nav-link" href="#" data-en="Contact">Kontakt</a>
+      </nav>
+    </header>
+
+    <!-- ============================= HERO ============================= -->
+    <main>
+      <section class="hero">
+        <div class="hero-image-wrap">
+          <img
+            src="images/hero.jpg"
+            alt="Jaderná elektrárna Dukovany"
+            data-en-alt="Dukovany Nuclear Power Plant"
+          />
         </div>
-        <p data-en="Following the conclusions and recommendations of the National Action Plan for the Development of Nuclear Energy, ČEZ, a. s. established its subsidiary Elektrárna Dukovany II, a. s. in 2015, which is the investor of the new nuclear source project at the Dukovany site. The supreme body is the general meeting; 80% of the shares are owned by the Ministry of Finance of the Czech Republic and the remaining 20% by ČEZ, a. s.">V návaznosti na závěry a doporučení Národního akčního plánu rozvoje jaderné energetiky založila společnost ČEZ, a. s. v roce 2015 dceřinou společnost Elektrárna Dukovany II, a. s., která je investorem projektu nového jaderného zdroje v lokalitě Dukovany. Vrcholným orgánem je valná hromada, 80&nbsp;% akcií vlastní Ministerstvo financí ČR a zbylých 20&nbsp;% společnost ČEZ, a. s.</p>
-      </div>
-    </article>
 
-    <article class="article-card" id="article-3">
-      <div class="article-media">
-        <img src="images/article-3.png" alt="Budoucnost energetiky" data-en-alt="The future of energy">
-      </div>
-      <div class="article-text">
-        <div class="article-title-row">
-          <h3 data-en="The future of energy">Budoucnost energetiky</h3>
-          <span class="article-arrow">
-            <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 2L10 10M10 10V3M10 10H3" stroke="#363738" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
+        <div class="hero-content">
+          <div class="hero-text">
+            <p
+              data-en="The Dukovany Nuclear Power Plant is one of the key sources of electricity generation in the Czech Republic. It was put into operation in the 1980s and consists of four VVER-440 pressurized water reactors."
+            >
+              Jaderná elektrárna Dukovany je jedním z klíčových zdrojů výroby
+              elektřiny v České republice. Do provozu byla uvedena v 80. letech
+              a tvoří ji čtyři tlakovodní reaktory typu VVER-440.
+            </p>
+            <p
+              data-en="The plant covers a significant share of domestic consumption. Thanks to its stable output, it contributes to energy security and low-carbon electricity production."
+            >
+              Elektrárna pokrývá významnou část domácí spotřeby. Díky stabilní
+              výrobě přispívá k energetické bezpečnosti a nízkouhlíkové produkci
+              elektřiny.
+            </p>
+          </div>
+
+          <div class="hero-cta-wrap">
+            <a href="#blog" class="btn btn-primary" data-en="Learn more"
+              >Dozvědět se více</a
+            >
+          </div>
         </div>
-        <p data-en="New nuclear units are a key pillar of the Czech Republic's long-term energy strategy. Stable, low-carbon electricity generation helps ensure the country's energy self-sufficiency at a time of rising demand and the shift away from fossil fuels.">Nové jaderné bloky jsou klíčovým pilířem dlouhodobé energetické strategie České republiky. Stabilní a nízkouhlíková výroba elektřiny pomáhá zajistit energetickou soběstačnost země i v období rostoucí poptávky a odklonu od fosilních paliv.</p>
-      </div>
-    </article>
+      </section>
 
-    <article class="article-card reverse" id="article-4">
-      <div class="article-media">
-        <img src="images/article-4.png" alt="Aktuality ze stavby" data-en-alt="Construction news">
-      </div>
-      <div class="article-text">
-        <div class="article-title-row">
-          <h3 data-en="News">Aktuality</h3>
-          <span class="article-arrow">
-            <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 2L10 10M10 10V3M10 10H3" stroke="#363738" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-        </div>
-        <p data-en="On October 15, the Faculty of Electrical Engineering and Communication at Brno University of Technology held the first PerFEKT ATOM Day, which attracted hundreds of students interested in nuclear energy. The program included an interactive exhibition, a nuclear quiz and presentations by industry partners, including the ČEZ Group.">Fakulta elektrotechniky a komunikačních technologií VUT v Brně uspořádala 15. října první ročník akce PerFEKT ATOM Day, která přilákala stovky studentů se zájmem o jadernou energetiku. Součástí programu byly interaktivní výstava, jaderný kvíz a prezentace průmyslových partnerů včetně Skupiny ČEZ.</p>
-      </div>
-    </article>
-  </section>
-</main>
+      <!-- ============================= BLOG ============================= -->
+      <section class="blog" id="blog">
+        <h2 class="blog-heading" data-en="News and articles">
+          Aktuality a články
+        </h2>
 
-<!-- ============================= FOOTER ============================= -->
-<footer class="site-footer">
-  <p>Copyright 2026 Elektrárna Dukovany II</p>
-</footer>
+        <article class="article-card" id="article-1">
+          <div class="article-media">
+            <img
+              src="images/article-1.png"
+              alt="Nový jaderný zdroj v Dukovanech"
+              data-en-alt="New nuclear source in Dukovany"
+            />
+          </div>
+          <div class="article-text">
+            <div class="article-title-row">
+              <h3 data-en="New nuclear source in Dukovany">
+                Nový jaderný zdroj v Dukovanech
+              </h3>
+              <span class="article-arrow">
+                <svg
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 2L10 10M10 10V3M10 10H3"
+                    stroke="#363738"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+            <p
+              data-en="The life cycle of a nuclear facility — briefly, preparation (investment, licensing and permitting), construction, commissioning, operation and decommissioning — is truly a long-distance run that can last more than 100 years. Of that, roughly 20 years are spent on project preparation and construction, the following 60 or more years on operation, and finally the plant is decommissioned."
+            >
+              Životní cyklus jaderného zařízení – tedy v krátkosti příprava
+              (investiční, licenční a povolovací), výstavba, uvádění do provozu,
+              provozování a vyřazení z provozu – je skutečně běh na dlouhou
+              trať, který trvá i více než 100 let. Z toho přibližně 20 let je
+              projekt připravován a je ve výstavbě, následujících 60 a více let
+              je provozován a nakonec je vyřazen z provozu.
+            </p>
+          </div>
+        </article>
 
-<!-- ============================= CASE STUDY LINK ============================= -->
-<button class="case-study-fab" id="caseStudyFab" aria-label="Zobrazit case study" data-en-aria="View case study">
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
-    <path d="M9.5 9.3C9.5 7.8 10.7 6.7 12.1 6.7C13.5 6.7 14.6 7.7 14.6 9C14.6 10.1 13.9 10.7 13.1 11.2C12.4 11.6 12 12.1 12 12.9V13.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="12" cy="16.3" r="1" fill="currentColor"/>
-  </svg>
-  <span class="case-study-tooltip" data-en="View case study">Zobrazit case study</span>
-</button>
+        <article class="article-card reverse" id="article-2">
+          <div class="article-media">
+            <img
+              src="images/article-2.png"
+              alt="O společnosti Elektrárna Dukovany II"
+              data-en-alt="About Elektrárna Dukovany II"
+            />
+          </div>
+          <div class="article-text">
+            <div class="article-title-row">
+              <h3 data-en="About the company">O společnosti</h3>
+              <span class="article-arrow">
+                <svg
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 2L10 10M10 10V3M10 10H3"
+                    stroke="#363738"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+            <p
+              data-en="Following the conclusions and recommendations of the National Action Plan for the Development of Nuclear Energy, ČEZ, a. s. established its subsidiary Elektrárna Dukovany II, a. s. in 2015, which is the investor of the new nuclear source project at the Dukovany site. The supreme body is the general meeting; 80% of the shares are owned by the Ministry of Finance of the Czech Republic and the remaining 20% by ČEZ, a. s."
+            >
+              V návaznosti na závěry a doporučení Národního akčního plánu
+              rozvoje jaderné energetiky založila společnost ČEZ, a. s. v roce
+              2015 dceřinou společnost Elektrárna Dukovany II, a. s., která je
+              investorem projektu nového jaderného zdroje v lokalitě Dukovany.
+              Vrcholným orgánem je valná hromada, 80&nbsp;% akcií vlastní
+              Ministerstvo financí ČR a zbylých 20&nbsp;% společnost ČEZ, a. s.
+            </p>
+          </div>
+        </article>
 
-<div class="case-study-modal" id="caseStudyModal" aria-hidden="true">
-  <div class="case-study-modal-backdrop" data-close="true"></div>
-  <div class="case-study-modal-panel" role="dialog" aria-modal="true">
-    <button class="case-study-close" id="caseStudyClose" aria-label="Zavřít" data-en-aria="Close">
+        <article class="article-card" id="article-3">
+          <div class="article-media">
+            <img
+              src="images/article-3.png"
+              alt="Budoucnost energetiky"
+              data-en-alt="The future of energy"
+            />
+          </div>
+          <div class="article-text">
+            <div class="article-title-row">
+              <h3 data-en="The future of energy">Budoucnost energetiky</h3>
+              <span class="article-arrow">
+                <svg
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 2L10 10M10 10V3M10 10H3"
+                    stroke="#363738"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+            <p
+              data-en="New nuclear units are a key pillar of the Czech Republic's long-term energy strategy. Stable, low-carbon electricity generation helps ensure the country's energy self-sufficiency at a time of rising demand and the shift away from fossil fuels."
+            >
+              Nové jaderné bloky jsou klíčovým pilířem dlouhodobé energetické
+              strategie České republiky. Stabilní a nízkouhlíková výroba
+              elektřiny pomáhá zajistit energetickou soběstačnost země i v
+              období rostoucí poptávky a odklonu od fosilních paliv.
+            </p>
+          </div>
+        </article>
+
+        <article class="article-card reverse" id="article-4">
+          <div class="article-media">
+            <img
+              src="images/article-4.png"
+              alt="Aktuality ze stavby"
+              data-en-alt="Construction news"
+            />
+          </div>
+          <div class="article-text">
+            <div class="article-title-row">
+              <h3 data-en="News">Aktuality</h3>
+              <span class="article-arrow">
+                <svg
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 2L10 10M10 10V3M10 10H3"
+                    stroke="#363738"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+            <p
+              data-en="On October 15, the Faculty of Electrical Engineering and Communication at Brno University of Technology held the first PerFEKT ATOM Day, which attracted hundreds of students interested in nuclear energy. The program included an interactive exhibition, a nuclear quiz and presentations by industry partners, including the ČEZ Group."
+            >
+              Fakulta elektrotechniky a komunikačních technologií VUT v Brně
+              uspořádala 15. října první ročník akce PerFEKT ATOM Day, která
+              přilákala stovky studentů se zájmem o jadernou energetiku.
+              Součástí programu byly interaktivní výstava, jaderný kvíz a
+              prezentace průmyslových partnerů včetně Skupiny ČEZ.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- ============================= FOOTER ============================= -->
+    <footer class="site-footer">
+      <p>Copyright 2026 Elektrárna Dukovany II</p>
+    </footer>
+
+    <!-- ============================= CASE STUDY LINK ============================= -->
+    <button
+      class="case-study-fab"
+      id="caseStudyFab"
+      aria-label="Zobrazit case study"
+      data-en-aria="View case study"
+    >
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <circle
+          cx="12"
+          cy="12"
+          r="9"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M9.5 9.3C9.5 7.8 10.7 6.7 12.1 6.7C13.5 6.7 14.6 7.7 14.6 9C14.6 10.1 13.9 10.7 13.1 11.2C12.4 11.6 12 12.1 12 12.9V13.3"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <circle cx="12" cy="16.3" r="1" fill="currentColor" />
       </svg>
+      <span class="case-study-tooltip" data-en="View case study"
+        >Zobrazit case study</span
+      >
     </button>
-    <iframe src="case-study/index.html" title="Case study" loading="lazy"></iframe>
-  </div>
-</div>
 
-<script src="js/script.js"></script>
-</body>
+    <div class="case-study-modal" id="caseStudyModal" aria-hidden="true">
+      <div class="case-study-modal-backdrop" data-close="true"></div>
+      <div class="case-study-modal-panel" role="dialog" aria-modal="true">
+        <button
+          class="case-study-close"
+          id="caseStudyClose"
+          aria-label="Zavřít"
+          data-en-aria="Close"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 6L18 18M18 6L6 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <iframe
+          src="case-study-cez/index.html"
+          title="Case study"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
