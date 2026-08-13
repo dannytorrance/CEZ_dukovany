@@ -157,3 +157,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var blog = document.getElementById('blog');
+  if (!blog) return;
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        blog.classList.add('is-visible');
+        observer.unobserve(blog);
+      }
+    });
+  }, { threshold: 0.05 });
+
+  observer.observe(blog);
+});
